@@ -1,0 +1,8 @@
+{
+  "uuid": "%uuid%",
+  "name": "LabyPorn",
+  "mainClass": "com.github.chrissdrip.laby.porn.LabyPorn",
+  "author": "chrissdrip",
+  "description": "Displays the twitch followers count of a specified channel.",
+  "category": 2
+}
