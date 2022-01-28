@@ -3,6 +3,7 @@
   "name": "LabyPorn",
   "mainClass": "com.github.chrissdrip.laby.porn.LabyPorn",
   "author": "chrissdrip",
-  "description": "Displays the twitch followers count of a specified channel.",
-  "category": 2
+  "description": "Displays some information about your favourite PornHub channel.",
+  "category": 2,
+  "icon": "https://i.postimg.cc/26KMfDL7/favicon.png"
 }
