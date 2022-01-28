@@ -3,7 +3,6 @@ package com.github.chrissdrip.laby.porn.util;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
@@ -55,7 +54,7 @@ public class PornHubUtil {
       } catch (IOException ex) {
         this.updateError("Please check your internet connection or wait a few minutes.");
       }
-    }, 0L, 1L, TimeUnit.SECONDS);
+    }, 0L, 3L, TimeUnit.SECONDS);
   }
 
   private void updateError(String error) {

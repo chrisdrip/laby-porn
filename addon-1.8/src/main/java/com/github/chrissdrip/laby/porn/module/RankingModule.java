@@ -1,6 +1,8 @@
 package com.github.chrissdrip.laby.porn.module;
 
+import com.github.chrissdrip.laby.porn.LabyPorn;
 import com.github.chrissdrip.laby.porn.util.PornHubUtil;
+import net.labymod.ingamegui.ModuleCategory;
 import net.labymod.ingamegui.moduletypes.SimpleModule;
 import net.labymod.settings.elements.ControlElement;
 import net.labymod.utils.Material;
@@ -34,7 +36,7 @@ public class RankingModule extends SimpleModule {
 
   @Override
   public ControlElement.IconData getIconData() {
-    return new ControlElement.IconData(Material.BEACON);
+    return new ControlElement.IconData(Material.NAME_TAG);
   }
 
   @Override
@@ -60,5 +62,10 @@ public class RankingModule extends SimpleModule {
   @Override
   public int getSortingId() {
     return 0;
+  }
+
+  @Override
+  public ModuleCategory getCategory() {
+    return LabyPorn.MODULE_CATEGORY;
   }
 }

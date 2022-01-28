@@ -6,12 +6,16 @@ import com.github.chrissdrip.laby.porn.module.ViewsModule;
 import com.github.chrissdrip.laby.porn.util.PornHubUtil;
 import java.util.List;
 import net.labymod.api.LabyModAddon;
+import net.labymod.ingamegui.ModuleCategory;
 import net.labymod.settings.elements.ControlElement;
+import net.labymod.settings.elements.ControlElement.IconData;
 import net.labymod.settings.elements.SettingsElement;
 import net.labymod.settings.elements.StringElement;
 import net.labymod.utils.Material;
 
 public class LabyPorn extends LabyModAddon {
+
+  public static final ModuleCategory MODULE_CATEGORY = new ModuleCategory("LabyPorn", true, new IconData(Material.FEATHER));
 
   private final PornHubUtil pornHubUtil = new PornHubUtil();
 
@@ -35,6 +39,7 @@ public class LabyPorn extends LabyModAddon {
   protected void fillSettings(List<SettingsElement> list) {
     list.add(new StringElement("PornHub Name", new ControlElement.IconData(Material.NAME_TAG), super.getConfig().get("pornHubName").getAsString(), changedValue -> {
       super.getConfig().addProperty("pornHubName", changedValue);
+      super.saveConfig();
     }));
   }
 

@@ -1,7 +1,9 @@
 package com.github.chrissdrip.laby.porn.module;
 
+import com.github.chrissdrip.laby.porn.LabyPorn;
 import com.github.chrissdrip.laby.porn.util.NumberFormatter;
 import com.github.chrissdrip.laby.porn.util.PornHubUtil;
+import net.labymod.ingamegui.ModuleCategory;
 import net.labymod.ingamegui.moduletypes.SimpleModule;
 import net.labymod.settings.elements.ControlElement;
 import net.labymod.utils.Material;
@@ -35,7 +37,7 @@ public class SubscribersModule extends SimpleModule {
 
   @Override
   public ControlElement.IconData getIconData() {
-    return new ControlElement.IconData(Material.BEACON);
+    return new ControlElement.IconData(Material.REDSTONE_TORCH_ON);
   }
 
   @Override
@@ -62,4 +64,10 @@ public class SubscribersModule extends SimpleModule {
   public int getSortingId() {
     return 0;
   }
+
+  @Override
+  public ModuleCategory getCategory() {
+    return LabyPorn.MODULE_CATEGORY;
+  }
+
 }
